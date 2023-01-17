@@ -11,7 +11,6 @@ import Button from '../../components/Button';
 import TextField from '../../components/TextField';
 import ErrorView from '../../components/ErrorView';
 import Validator, { validate } from 'email-validator';
-//import DatePicker from the package we installed
 import DateTimePicker from '@react-native-community/datetimepicker';
 import moment from 'moment';
 
