@@ -5,7 +5,7 @@ import { GET_USER_DETAILS} from './actions';
 //technologies & interviewer state is used to store the response data in state
 const initialState = {
  
-  userdetails: {},
+  userdetails: [],
 };
 
 

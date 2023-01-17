@@ -3,10 +3,10 @@
 export const GET_USER_DETAILS = 'GET_USER_DETAILS';
 
 //base url for the sample method
-const API_URL = '';
-const API_KEY = '<your-api-key>';
-const PARAMS = 'page=1';
-const BASE_URL = `${API_URL}?api_key=${API_KEY}&${PARAMS}`;
+const API_URL = 'https://pokeapi.co/api/v2/item';
+
+const PARAMS = 'offset=10&limit=10';
+const BASE_URL = `${API_URL}?${PARAMS}`;
 
 
 //initializing axios
@@ -24,15 +24,11 @@ export const getUserDetails = () => {
   
   try {
     return async dispatch => {
-      const res = await axios.post(
-        BASE_URL+'auth/login',
-        {username:'yuyu'},
-        loginConfig,
-      );
+      const res = await axios.get(BASE_URL);
       if (res.data) {
-        // console.log('====================================');
-        // console.log(res.data);
-        // console.log('====================================');
+        console.log('====================================');
+        console.log(res.data);
+        console.log('====================================');
         dispatch({
           type: GET_USER_DETAILS,
           payload: res.data,

@@ -8,6 +8,7 @@ const Home = ({navigation}) => {
   return (
     <View style={{flex: 1, marginTop: 44, paddingHorizontal: 20,alignSelf:'center',justifyContent:'center'}}>
      <Button  onPress={()=>{navigation.push('ContactUs')}} title={'Contact US'}/>
+     <Button style={{marginTop:15}}  onPress={()=>{navigation.push('ViewCatalog')}} title={'View Catalog'}/>
     </View>
   );
 };
